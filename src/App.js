@@ -26,7 +26,6 @@ export default function App() {
   const [stars, setStars] = useState([]);
   const audioRef = useRef(null);
   const swingRef = useRef(null);
-  const animRef = useRef(null);
 
   // Generate bg stars once
   useEffect(() => {
@@ -281,7 +280,6 @@ function CraneMachineFull() {
 // Zoomed-in machine interior with live crane
 // ─────────────────────────────────────────────────────────────────
 function ZoomedMachine({ state, craneX, craneY, grabbed, onButtonPress }) {
-  const isSwinging = state === STATES.CRANE_SWING;
   const isCatch = state === STATES.CATCH;
 
   return (
